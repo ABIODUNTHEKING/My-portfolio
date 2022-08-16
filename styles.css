@@ -1,0 +1,208 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: Raleway, Poppins;
+  box-sizing: border-box;
+}
+#navbar{
+  width: 100%;
+  text-align: right;
+  padding: 20px;
+  font-size: large;
+  position: fixed;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+  color: white;
+  margin-left: 25px;
+  box-sizing: border-box;
+}
+#welcome-section{
+ 
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./Trial.jpg);
+  box-sizing: border-box;
+}
+#welcome-section h1{
+  font-size: 6rem;
+  color: white;
+  box-sizing: border-box;
+}
+#welcome-section {
+  animation-name: welcome;
+  animation-duration: 5s;
+  
+}
+
+#welcome-section h1, #welcome-section p {
+	-webkit-animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: focus-in-contract-bck 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+
+@keyframes focus-in-contract-bck {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(300px);
+            transform: translateZ(300px);
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateZ(12px);
+            transform: translateZ(12px);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+    opacity: 1;
+  }
+}
+
+
+@keyframes welcome {
+ 0%{
+  background-image: url(./Gentle.jpg);
+ }
+ 100%{
+  background-image: url(./Trial.jpg);
+ }
+}
+
+#welcome-section p{
+  color: white;
+  box-sizing: border-box;
+}
+#projects{
+  background-color: gray;
+
+  box-sizing: border-box;
+}
+#projects h1{
+  padding: 20px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  text-align: center;
+  color: white;
+  box-sizing: border-box;
+}
+
+img{
+  height: calc(100% - 6.8rem);
+    width: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+div{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  box-sizing: border-box;
+}
+.project-tile{
+  background-color: rgba(0, 0, 128, 0.651);
+  padding: 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.some_projects a{
+  color: white;
+  text-align: center;
+}
+ #profile {
+   color: white;
+   background: linear-gradient(
+     360deg, gray, black
+   );
+   height: 100vh;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   box-sizing: border-box;
+ }
+ #profile-link{
+   display: flex;
+   font-size: x-large;
+   justify-content: center;
+   margin: 5px;
+   align-items: center;
+   flex-direction: row;
+   flex-wrap: wrap;
+   gap: 6px;
+  
+   
+ }
+ #profile-link:hover{
+  color: black;
+  margin: 10px;
+ }
+ footer{
+   padding: 50px;
+   text-align: center;
+   font-size: large;
+ }
+ @media (max-width: 1440px ){
+   #welcome-section h1{
+     font-size: 4rem;
+   }
+ }
+  @media (max-width: 1000px ){
+   #welcome-section h1{
+     font-size: 3rem;
+   }
+   div{
+    place-content: center;
+    overflow: hidden;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 70%));
+  }
+ }
+@media (max-width: 500px){
+  #welcome-section h1{
+     font-size: 2rem;
+   }
+ div{
+   place-content: center;
+   overflow: hidden;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 70%));
+ }
+}
+@media (max-width: 351px){
+  #welcome-section h1{
+     font-size: 2rem;
+   }
+ div{
+   place-content: center;
+   overflow: hidden;
+   grid-template-columns: repeat(auto-fit, minmax(320px, 70%));
+ }
+ #profile h1{
+  font-size: large;
+ }
+}
+@media (max-width: 260px){
+  #welcome-section h1{
+     font-size: 2rem;
+   }
+ div{
+   place-content: center;
+   overflow: hidden;
+   grid-template-columns: repeat(auto-fit, minmax(260px, 50%));
+ }
+ #profile h1{
+  font-size: large;
+ }
+ #projects h1{
+  font-size: small;
+ }
+}
