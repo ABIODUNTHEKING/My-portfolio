@@ -70,7 +70,7 @@ a{
 
 @keyframes welcome {
  0%{
-  background-image: url(./Gentle.jpg);
+  background-image: url(/fav/favicon.ico);
  }
  100%{
   background-image: url(./Trial.jpg);
